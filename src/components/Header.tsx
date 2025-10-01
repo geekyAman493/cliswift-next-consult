@@ -30,7 +30,7 @@ const Header = () => {
     <motion.header
       style={{ height: headerHeight }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'glass' : 'bg-transparent'
+        isScrolled ? 'glass' : 'glass-header'
       }`}
     >
       <div className="container mx-auto px-4 h-full flex items-center justify-between">
@@ -49,10 +49,10 @@ const Header = () => {
             <a
               key={item.label}
               href={item.href}
-              className="text-sm font-medium text-foreground hover:text-secondary transition-colors relative group"
+              className="text-sm font-medium text-white hover:text-teal-light transition-colors relative group"
             >
               {item.label}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full" />
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-teal-light transition-all duration-300 group-hover:w-full" />
             </a>
           ))}
         </nav>
@@ -70,7 +70,7 @@ const Header = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden p-2 text-foreground"
+          className="md:hidden p-2 text-white"
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>

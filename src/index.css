@@ -127,6 +127,12 @@ All colors MUST be HSL.
     box-shadow: var(--shadow-glass);
   }
 
+  .glass-header {
+    background: hsl(var(--primary) / 0.15);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid hsl(var(--border) / 0.1);
+  }
+
   .glass-dark {
     background: hsl(var(--primary) / 0.05);
     backdrop-filter: blur(12px);
