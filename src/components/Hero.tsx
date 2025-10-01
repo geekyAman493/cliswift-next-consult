@@ -12,8 +12,22 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Animated Background */}
-      <div className="absolute inset-0 gradient-hero opacity-95" />
+      {/* Video Background */}
+      <div className="absolute inset-0">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/hero-background.mp4" type="video/mp4" />
+        </video>
+        {/* Dark overlay for better text contrast */}
+        <div className="absolute inset-0 bg-primary/70" />
+      </div>
+      
+      {/* Subtle grid overlay */}
       <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]" />
       
       {/* Floating Elements */}
