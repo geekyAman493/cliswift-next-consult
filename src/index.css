@@ -144,12 +144,6 @@ All colors MUST be HSL.
     background-clip: text;
   }
 
-  .glass-header {
-    background: hsl(var(--primary) / 0.15);
-    backdrop-filter: blur(16px);
-    border-bottom: 1px solid hsl(var(--border) / 0.1);
-  }
-
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }
