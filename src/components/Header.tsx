@@ -40,7 +40,9 @@ const Header = () => {
           style={{ scale: logoScale }}
           className="flex items-center space-x-2"
         >
-          <img src={logo} alt="CliSwift" className="h-8 md:h-10 w-auto logo-glow" />
+          <div className="logo-container">
+            <img src={logo} alt="CliSwift" className="h-8 md:h-10 w-auto logo-glow" />
+          </div>
         </motion.a>
 
         {/* Desktop Navigation */}

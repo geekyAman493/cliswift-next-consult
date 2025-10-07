@@ -151,8 +151,16 @@ All colors MUST be HSL.
     text-shadow: 0 2px 20px hsl(var(--teal) / 0.3);
   }
 
+  .logo-container {
+    position: relative;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background: radial-gradient(ellipse at center, hsl(var(--teal) / 0.15) 0%, transparent 70%);
+    backdrop-filter: blur(8px);
+  }
+
   .logo-glow {
-    filter: drop-shadow(0 0 20px hsl(var(--teal) / 0.6)) drop-shadow(0 0 40px hsl(var(--teal) / 0.3));
+    filter: drop-shadow(0 0 20px hsl(var(--teal) / 0.8)) drop-shadow(0 0 40px hsl(var(--teal) / 0.5));
   }
 
   .animate-float {
