@@ -78,20 +78,24 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
           >
-            <Button
-              size="lg"
-              className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 group"
-            >
+          <Button
+            asChild
+            size="lg"
+            className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 group"
+          >
+            <a href="#contact">
               Talk to an Expert
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
-            >
-              View Services
-            </Button>
+            </a>
+          </Button>
+          <Button
+            asChild
+            size="lg"
+            variant="outline"
+            className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
+          >
+            <a href="#services">View Services</a>
+          </Button>
           </motion.div>
 
           {/* Trust Strip */}
