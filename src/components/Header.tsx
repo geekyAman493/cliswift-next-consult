@@ -40,7 +40,9 @@ const Header = () => {
           style={{ scale: logoScale }}
           className="flex items-center space-x-2"
         >
-          <img src={logo} alt="CliSwift" className="h-8 md:h-10 w-auto" />
+          <div className="logo-container">
+            <img src={logo} alt="CliSwift" className="h-8 md:h-10 w-auto logo-glow" />
+          </div>
         </motion.a>
 
         {/* Desktop Navigation */}
@@ -49,10 +51,14 @@ const Header = () => {
             <a
               key={item.label}
               href={item.href}
-              className="text-sm font-medium text-white hover:text-teal-light transition-colors relative group"
+              className={`text-sm font-medium transition-colors relative group ${
+                isScrolled ? 'text-primary hover:text-secondary' : 'text-white hover:text-teal-light'
+              }`}
             >
               {item.label}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-teal-light transition-all duration-300 group-hover:w-full" />
+              <span className={`absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${
+                isScrolled ? 'bg-secondary' : 'bg-teal-light'
+              }`} />
             </a>
           ))}
         </nav>
@@ -62,15 +68,15 @@ const Header = () => {
           <Button variant="ghost" size="sm">
             Sign In
           </Button>
-          <Button size="sm" className="bg-primary hover:bg-secondary">
-            Talk to an Expert
+          <Button asChild size="sm" className="bg-primary hover:bg-secondary">
+            <a href="#contact">Talk to an Expert</a>
           </Button>
         </div>
 
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden p-2 text-white"
+          className={`md:hidden p-2 transition-colors ${isScrolled ? 'text-primary' : 'text-white'}`}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -99,8 +105,8 @@ const Header = () => {
               <Button variant="ghost" size="sm">
                 Sign In
               </Button>
-              <Button size="sm" className="bg-primary hover:bg-secondary">
-                Talk to an Expert
+              <Button asChild size="sm" className="bg-primary hover:bg-secondary">
+                <a href="#contact">Talk to an Expert</a>
               </Button>
             </div>
           </nav>
