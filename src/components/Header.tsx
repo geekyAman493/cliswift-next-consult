@@ -68,8 +68,8 @@ const Header = () => {
           <Button variant="ghost" size="sm">
             Sign In
           </Button>
-          <Button size="sm" className="bg-primary hover:bg-secondary">
-            Talk to an Expert
+          <Button asChild size="sm" className="bg-primary hover:bg-secondary">
+            <a href="#contact">Talk to an Expert</a>
           </Button>
         </div>
 
@@ -105,8 +105,8 @@ const Header = () => {
               <Button variant="ghost" size="sm">
                 Sign In
               </Button>
-              <Button size="sm" className="bg-primary hover:bg-secondary">
-                Talk to an Expert
+              <Button asChild size="sm" className="bg-primary hover:bg-secondary">
+                <a href="#contact">Talk to an Expert</a>
               </Button>
             </div>
           </nav>
